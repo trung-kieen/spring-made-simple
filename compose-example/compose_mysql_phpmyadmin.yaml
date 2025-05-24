@@ -1,0 +1,21 @@
+services:
+  mysql-ecomercial-loader:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_PASSWORD=secret'
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=myuser'
+    ports:
+      - '3306'
+  phpmyadmin-ecomercial-loader:
+    image: 'phpmyadmin:latest'
+    restart: always
+    ports:
+      - 8081:80
+    depends_on:
+      - mysql-ecomercial-loader
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'PMA_HOST=mysql'
+      - 'PMA_PORT=3306'

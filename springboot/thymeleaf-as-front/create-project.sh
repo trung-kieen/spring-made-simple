@@ -1,0 +1,13 @@
+#!/bin/bash
+# Author: Nguyen Khac Trung Kien
+
+spring init -dweb,jpa,validation,lombok,h2,devtools,configuration-processor,thymeleaf  \
+-p jar \
+--build maven \
+--groupId=com.trung-kieen \
+--extract \
+--name thymeleaf \
+thymeleaf
+
+
+
