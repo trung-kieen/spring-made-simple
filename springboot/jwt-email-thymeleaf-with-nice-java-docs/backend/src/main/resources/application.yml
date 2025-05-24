@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: the-open-book
+
+
+# Threshold for file uploading
+servelet:
+  multipart:
+    max-file-size: 50MB
+springdoc:
+  default-produces-media-type: application/json
