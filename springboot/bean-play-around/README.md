@@ -1,3 +1,0 @@
-```shell
-mvn springboot:run
-```

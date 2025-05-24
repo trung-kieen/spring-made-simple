@@ -1,6 +1,0 @@
-
-services:
-  db:
-    build: ./Db
-    ports:
-        - 1433:1433
